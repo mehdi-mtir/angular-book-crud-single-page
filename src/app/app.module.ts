@@ -8,6 +8,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ListBooksComponent } from './list-books/list-books.component';
 import { AddBooksComponent } from './add-books/add-books.component';
+import { EditBooksComponent } from './edit-books/edit-books.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AddBooksComponent } from './add-books/add-books.component';
     FirstComponent,
     SecondComponent,
     ListBooksComponent,
-    AddBooksComponent
+    AddBooksComponent,
+    EditBooksComponent
   ],
   imports: [
     BrowserModule,

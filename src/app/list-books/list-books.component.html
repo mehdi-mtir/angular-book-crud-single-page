@@ -18,8 +18,8 @@
       <td>{{book.titre}}</td>
       <td>{{book.auteur}}</td>
       <td>{{book.prix}}</td>
-      <td><button class="btn btn-primary">Editer</button></td>
-      <td><button class="btn btn-danger">Supprimer</button></td>
+      <td><button class="btn btn-primary" (click)="changeAction('edit', book)">Editer</button></td>
+      <td><button class="btn btn-danger" (click)="deleteBook(book.id)">Supprimer</button></td>
     </tr>
   </tbody>
 </table>
@@ -29,3 +29,9 @@
   [lastId]="lastId"
   (bookToAdd)="addBook($event)">
 </app-add-books>
+
+<app-edit-books
+  *ngIf="action == 'edit'"
+  [bookToEdit]="bookToEdit"
+  (editedBook)="editBook($event)">
+</app-edit-books>
