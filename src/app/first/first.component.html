@@ -1,0 +1,33 @@
+<!--Data binding 1 : Interpolation , Expression-->
+<div>
+  <h2>{{titre}}</h2>
+  <p>{{5 + 6}}</p>
+</div>
+
+<!--Data binding 2 : Property binding-->
+<div>
+  <img [src]="image.src" [alt]="image.alt" />
+</div>
+
+<!--Data binding 3 : Event binding-->
+<div>
+  <button class="btn btn-primary" (click)="changeLogo()">Changer le logo</button>
+</div>
+
+<!--Data binding 4 : Two-way data binding-->
+<input type="text" [(ngModel)]="titre" />
+
+<!--Directive structurelle 1 : *ngFor-->
+<ul>
+  <li *ngFor="let p of pays">{{p}}</li>
+</ul>
+
+<!--Directive structurelle 2 " *ngIf"-->
+<button class="btn btn-danger" (click)="showHideText()">Show / Hide text</button>
+<div *ngIf="showText">Texte conditionnel</div>
+
+<!--input type="text" name="titre" #titre>
+<button type="button" (click)="ajouter(titre.value)">Ajouter</button-->
+
+<app-second [message]="titre" (envoiMessage)="showMessage($event)"></app-second>
+

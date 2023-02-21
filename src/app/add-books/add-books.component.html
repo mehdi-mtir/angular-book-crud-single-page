@@ -1,0 +1,16 @@
+<h2>Ajouter un livre</h2>
+<form>
+  <div class="mb-3">
+    <label for="titre" class="form-label">Titre</label>
+    <input type="text" class="form-control" id="titre" #titre>
+  </div>
+  <div class="mb-3">
+    <label for="auteur" class="form-label">Auteur</label>
+    <input type="text" class="form-control" id="auteur" #auteur>
+  </div>
+  <div class="mb-3">
+    <label for="prix" class="form-label">Prix</label>
+    <input type="text" class="form-control" id="prix" #prix>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="addBook(titre.value, auteur.value, +prix.value)">Valider</button>
+</form>
